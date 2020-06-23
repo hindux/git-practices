@@ -3,7 +3,7 @@ script: go build ./hello.go
 
 deploy:
   provider: releases
-  api_key: a51684d7830428bc2a909aec20150ee89b6a08b1
+  api_key: 
   file: ./hello
   skip_cleanup: true
   draft: true
