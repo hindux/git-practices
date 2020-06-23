@@ -3,7 +3,7 @@ script: go build ./hello.go
 
 deploy:
   provider: releases
-  api_key: 
+  api_key: $MY_TRAVIS
   file: ./hello
   skip_cleanup: true
   draft: true
