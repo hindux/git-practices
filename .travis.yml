@@ -3,7 +3,7 @@ script: go build ./hello.go
 
 deploy:
   provider: releases
-  api_key: ${{ aecrets.MY_TRAVIS }}
+  api_key: ${{ secrets.MY_TRAVIS }}
   file: ./hello
   skip_cleanup: true
   draft: true
