@@ -1,2 +1,9 @@
 language: go
-script: go run ./hello.go
+script: go build ./hello.go
+
+deploy:
+  provider: releases
+  api_key: 2330f765e5c2846332f51ee81ae3b24870363d42
+  file: ./hello
+  skip_cleanup: true
+  draft: true
