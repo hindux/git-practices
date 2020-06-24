@@ -8,7 +8,7 @@ os: linux
 
 script: 
     - go build ./hello.go
-    - ls -a ls
+    - ls -a 
     
 
 deploy:
