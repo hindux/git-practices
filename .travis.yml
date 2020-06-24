@@ -7,13 +7,17 @@ arch:
 os: linux
 
 script: 
-    - go build ./hello.go
+    - go build -o "hello$TRAVIS_CPU_ARCH" 
+    - echo "os name"
+    - echo "$TRAVIS_OS_NAME"
+    - echo "arch name"
+    - echo "$TRAVIS_CPU_ARCH"
     - ls -a 
     
 
 deploy:
   provider: releases
   api_key: $MY_TRAVIS
-  file: ./hello
+  file: "./hello$TRAVIS_CPU_ARCH"
   skip_cleanup: true
   draft: true
